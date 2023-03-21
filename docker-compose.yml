@@ -12,15 +12,15 @@ services:
     volumes:
       - ./database/sql:/docker-entrypoint-initdb.d
       - ./database/data:/data
-  javaservice:
-    image: javaservice
-    build:
-      context: .
-    container_name: app
-    depends_on:
-      - postgres
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/postgres
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=123
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+#  javaservice:
+#    image: javaservice
+#    build:
+#      context: .
+#    container_name: app
+#    depends_on:
+#      - postgres
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/postgres
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=123
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
